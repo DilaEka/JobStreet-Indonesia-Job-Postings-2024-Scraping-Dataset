@@ -6,11 +6,14 @@ data source: https://www.kaggle.com/datasets/husnind/indonesia-average-job-salar
 # Key Analyses 
 1. Salary Insights : highest-paying job titles, salary comparison per industry, salary distribution by job level,
    median vs average salary accross categories
-   ```sql
-SELECT *
-FROM tabel
-WHERE kondisi = 'apapun';
+<details>
+  <summary>Click to view SQL Query</summary>
+
+```sql
+-- your SQL here
 ```
+
+</details>
 
 3. Location-Based Analysis : cities with the highest salary ranges, which regions offer the most job opportunities,
    salary gap between Jakarta vs non-Jakarta cities
