@@ -9,7 +9,8 @@ data source: https://www.kaggle.com/datasets/husnind/indonesia-average-job-salar
 <details>
   <summary>Click to view SQL Query</summary>
 --cities with the highest salary ranges
-```select 
+```
+select 
 	location,
 	round(avg(salary),2) as avg
 from id_jobs 
