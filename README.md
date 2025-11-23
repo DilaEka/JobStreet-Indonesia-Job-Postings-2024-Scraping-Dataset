@@ -12,11 +12,32 @@ data source: https://www.kaggle.com/datasets/husnind/indonesia-average-job-salar
 --cities with the highest salary ranges
 SELECT
 	location,
-	ROUND(AVG(salary),2) as avg_salary
+	ROUND(AVG(salary),2) AS avg_salary
 FROM id_jobs 
 GROUP BY location
 ORDER BY avg_salary DESC 
 LIMIT 10;
+
+--regions that offer the most job opportunities
+SELECT 
+	location, 
+	COUNT(location) AS count 
+FROM id_jobs 
+GROUP BY location 
+ORDER BY count DESC 
+LIMIT 10;
+
+--compare each location's avg salary with Jakarta's avg salary
+SELECT
+	location,
+	ROUND(AVG(salary)) AS salary, 
+	ROUND(AVG(salary) - (
+		SELECT AVG(salary)
+		FROM id_jobs 
+		WHERE location ILIKE '%jakarta%')) AS diff_salary 
+FROM id_jobs 
+GROUP BY location 
+ORDER BY diff_salary DESC
 ```
 </details> 
 
