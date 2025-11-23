@@ -8,16 +8,18 @@ data source: https://www.kaggle.com/datasets/husnind/indonesia-average-job-salar
    salary gap between Jakarta vs non-Jakarta cities
 <details>
   <summary>Click to view SQL Query</summary>
-```sql
+	
+```
 --cities with the highest salary ranges
-select 
+SELECT
 	location,
-	round(avg(salary),2) as avg
-from id_jobs 
-group by location
-order by avg desc 
-limit 10;
-</details> ```
+	ROUND(AVG(salary),2) as avg_salary
+FROM id_jobs 
+GROUP BY location
+ORDER BY avg_salary DESC 
+LIMIT 10;
+```
+</details> 
 
 3. 
 4. Company-Level Analysis : companies with the most job postings, companies offering above-average salaries
