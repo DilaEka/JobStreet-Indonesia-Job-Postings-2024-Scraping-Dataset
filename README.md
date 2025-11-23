@@ -41,8 +41,23 @@ ORDER BY diff_salary DESC
 ```
 </details> 
 
-3. 
-4. Company-Level Analysis : companies with the most job postings, companies offering above-average salaries
+2. Company-Level Analysis : companies with the most job postings, companies offering above-average salaries
+<details>
+  <summary>Click to view SQL Query</summary>
+	
+```
+--companies with the most job postings
+select 
+	company, 
+	count(company) as count
+from id_jobs 
+group by company 
+order by count desc limit 20
+
+
+
+```
+</details> 
 5. Job Demand Trends : top 20 most common job titles, categories with rising or declining demand
    
 # Visualizations 
@@ -62,7 +77,7 @@ String Operations : - ilike/like for text matching
                     - trim(), replace()
 Aggregations 
 Joins 
-CTE 
+Subquery, CTE 
 Window Functions : row_number(), rank(), dense_rank(), over(partition by..)
 
 2. Power BI : data modeling, DAX, dashboard, map visualization, filter by job title, company, or salary range
