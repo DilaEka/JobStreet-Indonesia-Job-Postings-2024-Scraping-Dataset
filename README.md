@@ -4,8 +4,7 @@ The project focuses on understanding salary distribution, job market trends, and
 data source: https://www.kaggle.com/datasets/husnind/indonesia-average-job-salary?select=job_salary_mean.csv 
 
 # Key Analyses 
-1. Location-Based Analysis : cities with the highest salary ranges, which regions offer the most job opportunities,
-   salary gap between Jakarta vs non-Jakarta cities
+1. Location-Based Analysis : cities with the highest salary ranges, which regions offer the most job opportunities,salary gap between Jakarta vs non-Jakarta cities
 <details>
   <summary>Click to view SQL Query</summary>
 	
